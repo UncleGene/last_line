@@ -7,18 +7,18 @@ covers only non-GET (or HEAD) requests, as GET requests are not supposed to chan
 Unfortunately, there are two main gaps in default CSRF prevention:
 
 - Routing information is handled independently from controller logic. It is not trivial to trace
-  which actions are allowed to process GET requests. Most common example - uncommenting generic route
+  which actions are allowed to process GET requests. Most common example - un-commenting generic route
   `match ':controller(/:action(/:id))(.:format)'` (hidden at the end of `routes.rb`) opens all controller
-  actions to GET requests
+  actions to GET requests.
 
-- Sometimes it is important to provide CSRF protection gor GET requests too. Common use case for this -
+- Sometimes it is important to provide CSRF protection for GET requests too. Common use case for this -
   redirect from external service, like third party authentication.
 
 LastLine is an attempt to bridge these gaps. It provides
 
 - Whitelisting actions for GET requests on controller level
 
-- Filter that verifies authenticity token on all requests, including GET and HEAD
+- A way to verify authenticity token for GET request
 
 ## Installation
 
