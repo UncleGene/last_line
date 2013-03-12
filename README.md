@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/kalenkov/last_line.png)](https://codeclimate.com/github/kalenkov/last_line)
+
 # LastLine
 
 ## Last Line of CSRF Defence
