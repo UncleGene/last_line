@@ -1,6 +1,6 @@
 .bundle/
 *.gem
-log/*.log
+*.log
 .idea/
 .rvmrc
 Gemfile.lock
